@@ -163,19 +163,24 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
+
         /*
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
 
+        Migrator\MigrationServiceProvider::class,
         /*
-         * Application Service Providers...
+         * Domains Service Providers...
          */
-        confee\Providers\AppServiceProvider::class,
-        confee\Providers\AuthServiceProvider::class,
-        // confee\Providers\BroadcastServiceProvider::class,
-        confee\Providers\EventServiceProvider::class,
-        confee\Providers\RouteServiceProvider::class,
+       App\Domains\Users\Providers\DomainsServiceProvider::class,
+
+        /*
+         * Units Service Providers...
+         */
+
+        App\Units\Authentication\Providers\UnitServiceProvider::class,
 
     ],
 
